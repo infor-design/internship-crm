@@ -1,22 +1,17 @@
+
+
 {
-  "name": "internship-crm",
+  "name": "crm",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/infor-design/internship-crm.git"
-  },
-  "author": "",
+  "author": "Griffin Blotner",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/infor-design/internship-crm/issues"
-  },
-  "homepage": "https://github.com/infor-design/internship-crm#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ids-enterprise": "^4.29.3"
   }
 }

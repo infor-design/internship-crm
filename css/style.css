@@ -1,0 +1,75 @@
+:root {
+    --gray-dark: darkgray;
+    --gray-dark2: #040404;
+    --gray-medium: #5d5d5d;
+    --gray-light: #bfbfbf;
+    --gray-lighter: #eee;
+    --azure: #0066d4;
+    --white: #fff;
+  
+    --body-text: var(--gray-dark);
+    --headline-text: var(--white);
+  
+    --table-cell-spacing: 12px;
+    --pager-element-height: 50px;
+  }
+  
+  html, body {
+    box-sizing: border-box;
+  }
+  
+  body * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  header {
+    background-color: var(--azure);
+    color: var(--headline-text);
+  
+    display:flex;
+  }
+  
+  .header__btn {
+    margin-left: auto;
+  }
+  
+  th,
+  td {
+    padding: var(--table-cell-spacing);
+    margin:none;
+  }
+  
+  .pager {
+    align-items: center;
+    display: flex;
+    height: var(--pager-element-height);
+    justify-content: center;
+  }
+  
+  .pager__btn {
+    height: inherit;
+  }
+  
+  .pager__input-wrapper {
+    padding: 0 var(--table-cell-spacing);
+  }
+  
+  .pager__input {
+    line-height: var(--pager-element-height);
+    max-width: 50px;
+  }
+
+  h2{
+    margin: 12px;
+    font-family: "Helvetica Neue"; 
+    font-weight:400;
+    font-size:20px;
+  }
+
+  .itsdagray{
+    background-color: lightgray;
+  }
