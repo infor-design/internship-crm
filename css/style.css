@@ -11,7 +11,7 @@
     --headline-text: var(--white);
   
     --table-cell-spacing: 12px;
-    --pager-element-height: 50px;
+    --pager-element-height: 30px;
   }
   
   html, body {
@@ -32,9 +32,22 @@
   
     display:flex;
   }
+
+  thead {
+    background-color: var(--gray-light);
+  }
+
+  td {
+    border-bottom: 2px solid var(--gray-medium);
+  }
+
+  table {
+    text-align: center;
+    padding: 30px 0px;
+  }
   
   .header__btn {
-    margin-left: auto;
+     margin-left: auto;
   }
   
   th,
@@ -68,8 +81,4 @@
     font-family: "Helvetica Neue"; 
     font-weight:400;
     font-size:20px;
-  }
-
-  .itsdagray{
-    background-color: lightgray;
   }
