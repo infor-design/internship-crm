@@ -2,8 +2,10 @@
     --gray-dark: darkgray;
     --gray-dark2: #040404;
     --gray-medium: #5d5d5d;
+    --gray-darker: #3b3b3b;
     --gray-light: #bfbfbf;
     --gray-lighter: #eee;
+
     --azure: #0066d4;
     --white: #fff;
   
@@ -34,7 +36,8 @@
   }
 
   thead {
-    background-color: var(--gray-light);
+    background-color: var(--gray-lighter);
+    text-align: left;
   }
 
   td {
@@ -44,8 +47,8 @@
   table {
     border-collapse: separate;
     border-spacing: 0px;
-    text-align: center;
     padding: 30px 0px;
+    margin: 0 auto;
   }
   
   .header__btn {
@@ -83,4 +86,12 @@
     font-family: "Helvetica Neue"; 
     font-weight:400;
     font-size:20px;
+  }
+
+  .icon_edit {
+    width: 40;
+  }
+
+  .icon_detail {
+    width: 40;
   }
