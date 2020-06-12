@@ -27,6 +27,13 @@
   body {
     font-family: sans-serif;
   }
+
+  .main{
+    display:flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+  }
   
   header {
     background-color: var(--azure);
@@ -48,7 +55,6 @@
     border-collapse: separate;
     border-spacing: 0px;
     padding: 30px 0px;
-    margin: 0 auto;
   }
   
   .header__btn {
@@ -88,10 +94,6 @@
     font-size:20px;
   }
 
-  .icon_edit {
-    width: 40;
-  }
-
-  .icon_detail {
-    width: 40;
+  .icon{
+    width: 40px;
   }
