@@ -2,8 +2,10 @@
     --gray-dark: darkgray;
     --gray-dark2: #040404;
     --gray-medium: #5d5d5d;
+    --gray-darker: #3b3b3b;
     --gray-light: #bfbfbf;
     --gray-lighter: #eee;
+
     --azure: #0066d4;
     --white: #fff;
   
@@ -25,6 +27,13 @@
   body {
     font-family: sans-serif;
   }
+
+  /* .main{
+    display:flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+  } */
   
   header {
     background-color: var(--azure);
@@ -34,7 +43,8 @@
   }
 
   thead {
-    background-color: var(--gray-light);
+    background-color: var(--gray-lighter);
+    text-align: left;
   }
 
   td {
@@ -44,8 +54,8 @@
   table {
     border-collapse: separate;
     border-spacing: 0px;
-    text-align: center;
     padding: 30px 0px;
+    margin: 0 auto;
   }
   
   .header__btn {
@@ -83,4 +93,8 @@
     font-family: "Helvetica Neue"; 
     font-weight:400;
     font-size:20px;
+  }
+
+  .icon{
+    width: 20px;
   }
