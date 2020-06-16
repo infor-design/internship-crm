@@ -12,37 +12,56 @@
     --body-text: var(--gray-dark);
     --headline-text: var(--white);
   
-    --table-cell-spacing: 12px;
+    --table-cell-height-spacing: 12px;
+    --table-cell-width-spacing: 25px;
     --pager-element-height: 30px;
+    --margin-height-spacing: 20px;
+    --button-padding: 7px;
   }
 
-  .main{
-    margin: 0 auto;
-    text-align: center;
-    font-family: Helvetica; /* Fix Text*/
-    color:var(--gray-darker);
-    font-weight:normal; 
-  }
-  
-  .logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:100px;
-  }
+.logo{
+  display: block;
+  margin: 100px auto var(--pager-element-height) auto;
+}
 
-  .ast{
-    color:red;
-  } 
+.page-name{
+  text-align: center;
+  font-family: Helvetica;
+  color: var(--gray-darker);
+  font-weight: normal; 
+}
 
-  #forms{
-    text-align:center;  
-    font-family: Helvetica;
-    color:var(--gray-darker);
-  }
+.ast{
+  color:red;
+} 
 
-  input{
-    height: 20px;
-    width: 250px;
-  }
+.forms{
+  text-align: center;
+  font-family: Helvetica;
+  color: var(--gray-darker);
+  font-weight: normal; 
+}
+
+.form-text {
+  text-align: left;
+  margin-left: 584px;
+}
+
+input{
+  height: var(--margin-height-spacing);
+  width: 250px;
+}
+
+button {
+  margin-top: var(--margin-height-spacing);
+  background-color: var(--azure);
+  color: var(--white);
+  border-color: var(--azure);
+  padding: var(--button-padding);
+  width: 260px;
+}
+
+.newpassword-page {
+  margin-top: var(--margin-height-spacing);
+}
   
