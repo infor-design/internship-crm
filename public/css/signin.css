@@ -1,0 +1,48 @@
+:root {
+    --gray-dark: darkgray;
+    --gray-dark2: #040404;
+    --gray-medium: #5d5d5d;
+    --gray-darker: #3b3b3b;
+    --gray-light: #bfbfbf;
+    --gray-lighter: #eee;
+  
+    --azure: #0066d4;
+    --white: #fff;
+  
+    --body-text: var(--gray-dark);
+    --headline-text: var(--white);
+  
+    --table-cell-spacing: 12px;
+    --pager-element-height: 30px;
+  }
+
+  .main{
+    margin: 0 auto;
+    text-align: center;
+    font-family: Helvetica; /* Fix Text*/
+    color:var(--gray-darker);
+    font-weight:normal; 
+  }
+  
+  .logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:100px;
+  }
+
+  .ast{
+    color:red;
+  } 
+
+  #forms{
+    text-align:center;  
+    font-family: Helvetica;
+    color:var(--gray-darker);
+  }
+
+  input{
+    height: 20px;
+    width: 250px;
+  }
+  
