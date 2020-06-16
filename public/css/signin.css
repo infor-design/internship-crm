@@ -15,91 +15,34 @@
     --table-cell-spacing: 12px;
     --pager-element-height: 30px;
   }
-  h1{
-    font-family: "Helvetica Neue";
-    margin: 12px;
-    font-weight:400;
-    font-size:20px;
-  }h3
-  html, body {
-    box-sizing: border-box;
-  }
-  
-  body * {
-    box-sizing: border-box;
-  }
-  
 
-  
-  
-  header {
-    background-color: var(--azure);
-    color: var(--headline-text);
-  
-    display:flex;
-  }
-  
-  thead {
-    background-color: var(--gray-lighter);
-    text-align: left;
-  }
-  
-  td {
-    border-bottom: 2px solid var(--gray-medium);
-  }
-  
-  table {
-    border-collapse: separate;
-    border-spacing: 0px;
-    padding: 30px 0px;
+  .main{
     margin: 0 auto;
+    text-align: center;
+    font-family: Helvetica; /* Fix Text*/
+    color:var(--gray-darker);
+    font-weight:normal; 
   }
   
-  .header__btn {
-     margin-left: auto;
-  }
-  
-  th,
-  td {
-    padding: var(--table-cell-spacing);
-    margin:none;
-  }
-  
-  .pager {
-    align-items: center;
-    display: flex;
-    height: var(--pager-element-height);
-    justify-content: center;
-  }
-  
-  .pager__btn {
-    height: inherit;
-  }
-  
-  .pager__input-wrapper {
-    padding: 0 var(--table-cell-spacing);
-  }
-  
-  .pager__input {
-    line-height: var(--pager-element-height);
-    max-width: 50px;
-  }
-  
-  h2{
-    margin: 12px;
-    font-family: "Helvetica Neue"; 
-    font-weight:400;
-    font-size:20px;
-  }
-  
-  .icon{
-    width: 20px;
+  .logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:100px;
   }
 
-  img{
-    
-     align-items: center; justify-content: center; flex-direction: column; 
+  .ast{
+    color:red;
+  } 
 
-
+  #forms{
+    text-align:center;  
+    font-family: Helvetica;
+    color:var(--gray-darker);
   }
 
+  input{
+    height: 20px;
+    width: 250px;
+  }
+  
