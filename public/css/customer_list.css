@@ -53,6 +53,8 @@ table {
 
 .header__btn {
    margin-left: auto;
+   background-color: var(--azure);
+   border: none;
 }
 
 th,
@@ -88,6 +90,7 @@ h2{
   font-size: 20px;
 }
 
-.icon{
-  width: 20px;
+.icon-button {
+  border: none;
+  background-color: var(--white);
 }
