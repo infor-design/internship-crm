@@ -56,9 +56,9 @@ button {
   margin-top: var(--margin-height-spacing);
   background-color: var(--azure);
   color: var(--white);
-  border-color: var(--azure);
+  border: none;
   padding: var(--button-padding);
-  width: 260px;
+  width: 257px;
 }
 
 .newpassword-page {
