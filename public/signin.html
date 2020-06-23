@@ -9,6 +9,56 @@
     </head>
   
     <body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCLlpkdAaT6oGOFRuLJBrqReYICyuOysoM",
+    authDomain: "internship-crm.firebaseapp.com",
+    databaseURL: "https://internship-crm.firebaseio.com",
+    projectId: "internship-crm",
+    storageBucket: "internship-crm.appspot.com",
+    messagingSenderId: "531694799911",
+    appId: "1:531694799911:web:34d2f4b988d4a2bfc85202",
+    measurementId: "G-9QQFCRJ765"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script defer>
+  var firebase = require("firebase/app");
+
+  // Add the Firebase products that you want to use
+  require("firebase/auth");
+  require("firebase/firestore");
+
+  var provider  = new firebase.auth.GoogleAuthProvider();
+
+  firebase.auth().signInWithPopup(provider).then(function(result){
+    var token = result.credential.accessToken;
+
+    var user = result.user;
+
+   }).catch(function(error){
+
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    var email = error.email;
+
+    var credential = error.credential;
+  });
+</script>
+      
         <img src="../img/logo-infor.png" width="100" alt="" class="logo">
         <h1 class="page-name">Application Name</h1>
 

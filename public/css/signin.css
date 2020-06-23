@@ -56,7 +56,7 @@ button {
   margin-top: var(--margin-height-spacing);
   background-color: var(--azure);
   color: var(--white);
-  border-color: none;
+  border: none;
   padding: var(--button-padding);
   width: 257px;
 }
