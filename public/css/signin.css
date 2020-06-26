@@ -1,62 +1,69 @@
 :root {
-    --gray-dark: darkgray;
-    --gray-dark2: #040404;
-    --gray-medium: #5d5d5d;
-    --gray-darker: #3b3b3b;
-    --gray-light: #bfbfbf;
-    --gray-lighter: #eee;
-  
-    --azure: #0066d4;
-    --white: #fff;
-  
-    --body-text: var(--gray-dark);
-    --headline-text: var(--white);
+  --gray-dark: darkgray;
+  --gray-dark2: #040404;
+  --gray-medium: #5d5d5d;
+  --gray-darker: #3b3b3b;
+  --gray-light: #bfbfbf;
+  --gray-lighter: #eee;
 
-    --margin-height-spacing: 20px; /*1.3vh*/
-    --button-height-spacing: 10px; /*3vh*/
-    --page-spacing: 130px; /*18vh*/
-  }
+  --azure: #0066d4;
+  --white: #fff;
+
+  --body-text: var(--gray-dark);
+  --headline-text: var(--white);
+
+  --margin-height-spacing: 20px;
+  --button-height-spacing: 10px;
+  --page-spacing: 130px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 
 body {
   font-family: Helvetica;
   padding: var(--page-spacing) 0;
 }
 
-form{
+form {
   border: 2px grey;
   text-align: left;
   color: var(--gray-darker);
   font-weight: normal; 
 }
 
-.logo{
-  display:block;
+.form-container {
+  max-width: 300px;
   margin: 0 auto;
 }
 
-.page-name{
+.logo { 
+  display: block;
+  margin: 0 auto;
+}
+
+.page-name {
   text-align: center;
   color: var(--gray-darker);
   font-weight: normal; 
 }
 
-.form-group{
-  margin: var(--button-height-spacing) 40vw;
-  color: var(--gray-medium);
-}
-
-.ast{
+.ast {
   color:red;
 } 
 
-input{
-  margin-top:10px;
+input {
+  margin-top: 10px;
   height: var(--margin-height-spacing);
-  width: 18vw;
-}
-
-.signin-button{
-  text-align:center;
+  width: 100%;
+  padding: 1rem .5rem;
 }
 
 button {
@@ -65,18 +72,24 @@ button {
   color: var(--white);
   border: none;
   padding: var(--button-height-spacing);
-  width: 18.5vw;
+  width: 100%;
 }
 
 .newpassword-page {
   text-align:center;
   margin-top: var(--margin-height-spacing);
 }
-  
-.email-text{
+
+
+.form-group {
+  color: var(--gray-medium);
   margin-bottom: var(--margin-height-spacing);
 }
 
-.form-text-email{
-  margin-bottom: var(--margin-height-spacing);
+.form-group label {
+  display: block;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
 }
