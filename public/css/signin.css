@@ -11,45 +11,52 @@
   
     --body-text: var(--gray-dark);
     --headline-text: var(--white);
-  
-    --table-cell-height-spacing: 12px;
-    --table-cell-width-spacing: 25px;
-    --pager-element-height: 30px;
-    --margin-height-spacing: 20px;
-    --button-padding: 7px;
+
+    --margin-height-spacing: 20px; /*1.3vh*/
+    --button-height-spacing: 10px; /*3vh*/
+    --page-spacing: 130px; /*18vh*/
   }
 
+body {
+  font-family: Helvetica;
+  padding: var(--page-spacing) 0;
+}
+
+form{
+  border: 2px grey;
+  text-align: left;
+  color: var(--gray-darker);
+  font-weight: normal; 
+}
+
 .logo{
-  display: block;
-  margin: 100px auto var(--pager-element-height) auto;
+  display:block;
+  margin: 0 auto;
 }
 
 .page-name{
   text-align: center;
-  font-family: Helvetica;
   color: var(--gray-darker);
   font-weight: normal; 
+}
+
+.form-group{
+  margin: var(--button-height-spacing) 40vw;
+  color: var(--gray-medium);
 }
 
 .ast{
   color:red;
 } 
 
-.forms{
-  text-align: center;
-  font-family: Helvetica;
-  color: var(--gray-darker);
-  font-weight: normal; 
-}
-
-.form-text {
-  text-align: left;
-  margin-left: 584px;
-}
-
 input{
+  margin-top:10px;
   height: var(--margin-height-spacing);
-  width: 250px;
+  width: 18vw;
+}
+
+.signin-button{
+  text-align:center;
 }
 
 button {
@@ -57,11 +64,19 @@ button {
   background-color: var(--azure);
   color: var(--white);
   border: none;
-  padding: var(--button-padding);
-  width: 257px;
+  padding: var(--button-height-spacing);
+  width: 18.5vw;
 }
 
 .newpassword-page {
+  text-align:center;
   margin-top: var(--margin-height-spacing);
 }
   
+.email-text{
+  margin-bottom: var(--margin-height-spacing);
+}
+
+.form-text-email{
+  margin-bottom: var(--margin-height-spacing);
+}
