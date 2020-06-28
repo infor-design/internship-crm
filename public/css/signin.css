@@ -1,55 +1,69 @@
 :root {
-    --gray-dark: darkgray;
-    --gray-dark2: #040404;
-    --gray-medium: #5d5d5d;
-    --gray-darker: #3b3b3b;
-    --gray-light: #bfbfbf;
-    --gray-lighter: #eee;
-  
-    --azure: #0066d4;
-    --white: #fff;
-  
-    --body-text: var(--gray-dark);
-    --headline-text: var(--white);
-  
-    --table-cell-height-spacing: 12px;
-    --table-cell-width-spacing: 25px;
-    --pager-element-height: 30px;
-    --margin-height-spacing: 20px;
-    --button-padding: 7px;
-  }
+  --gray-dark: darkgray;
+  --gray-dark2: #040404;
+  --gray-medium: #5d5d5d;
+  --gray-darker: #3b3b3b;
+  --gray-light: #bfbfbf;
+  --gray-lighter: #eee;
 
-.logo{
-  display: block;
-  margin: 100px auto var(--pager-element-height) auto;
+  --azure: #0066d4;
+  --white: #fff;
+
+  --body-text: var(--gray-dark);
+  --headline-text: var(--white);
+
+  --margin-height-spacing: 20px;
+  --button-height-spacing: 10px;
+  --page-spacing: 130px;
 }
 
-.page-name{
-  text-align: center;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
   font-family: Helvetica;
+  padding: var(--page-spacing) 0;
+}
+
+form {
+  border: 2px grey;
+  text-align: left;
   color: var(--gray-darker);
   font-weight: normal; 
 }
 
-.ast{
+.form-container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.logo { 
+  display: block;
+  margin: 0 auto;
+}
+
+.page-name {
+  text-align: center;
+  color: var(--gray-darker);
+  font-weight: normal; 
+}
+
+.ast {
   color:red;
 } 
 
-.forms{
-  text-align: center;
-  font-family: Helvetica;
-  color: var(--gray-darker);
-  font-weight: normal; 
-}
-
-.form-text {
-  text-align: left;
-  margin-left: 584px;
-}
-
-input{
+input {
+  margin-top: 10px;
   height: var(--margin-height-spacing);
-  width: 250px;
+  width: 100%;
+  padding: 1rem .5rem;
 }
 
 button {
@@ -57,11 +71,25 @@ button {
   background-color: var(--azure);
   color: var(--white);
   border: none;
-  padding: var(--button-padding);
-  width: 257px;
+  padding: var(--button-height-spacing);
+  width: 100%;
 }
 
 .newpassword-page {
+  text-align:center;
   margin-top: var(--margin-height-spacing);
 }
-  
+
+
+.form-group {
+  color: var(--gray-medium);
+  margin-bottom: var(--margin-height-spacing);
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
+}
