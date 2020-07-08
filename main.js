@@ -28,7 +28,7 @@ app.use(express.static(path.resolve(__dirname, 'dist'), {
 // =================================================
 // This is the original page we worked on
 app.get('/public/html', function(req,res) {
-  res.sendFile(path.resolve(__dirname, 'public', 'html', 'customer-list.html'));
+  res.sendFile(path.resolve(__dirname, 'public', 'html', 'index.html'));
 });
 
 // This is the new base route that links to our generated assets

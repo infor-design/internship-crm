@@ -8,7 +8,7 @@
 
   --azure: #0066d4;
   --white: #fff;
-
+  
   --body-text: var(--gray-dark);
   --headline-text: var(--white);
 
@@ -19,13 +19,12 @@
 
 html, body {
   box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0 auto; /* for body */
 }
 
-body * {
-  box-sizing: border-box;
-}
-
-body {
+*, *:before, *:after {
+  box-sizing: inherit;
   font-family: sans-serif;
 }
 
@@ -35,13 +34,23 @@ header {
   display: flex;
 }
 
+.threeDot-icon {
+  background-color: var(--azure);
+}
+
+.header__btn {
+  margin-left: auto;
+  background-color: var(--azure);
+  border: none;
+}
+
 thead {
   background-color: var(--gray-lighter);
   text-align: left;
 }
 
 td {
-  border-bottom: 2px solid var(--gray-medium);
+  border-bottom: 1px solid lightgray /*var(--gray-medium)*/;
 }
 
 table {
@@ -49,12 +58,6 @@ table {
   border-spacing: 0px;
   padding: 30px 0px;
   margin: 0 auto;
-}
-
-.header__btn {
-   margin-left: auto;
-   background-color: var(--azure);
-   border: none;
 }
 
 th,
@@ -95,6 +98,6 @@ h2{
   background-color: var(--white);
 }
 
-.threeDot-icon {
-  background-color: var(--azure);
+.twrapper{
+  overflow-x:auto;
 }
