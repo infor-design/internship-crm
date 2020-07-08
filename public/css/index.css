@@ -19,13 +19,12 @@
 
 html, body {
   box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0 auto; /* for body */
 }
 
-body * {
-  box-sizing: border-box;
-}
-
-body {
+*, *:before, *:after {
+  box-sizing: inherit;
   font-family: sans-serif;
 }
 
@@ -33,6 +32,24 @@ header {
   background-color: var(--azure);
   color: var(--headline-text);
   display: flex;
+}
+
+body{
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.threeDot-icon {
+  background-color: var(--azure);
+}
+
+.header__btn {
+  margin-left: auto;
+  background-color: var(--azure);
+  border: none;
 }
 
 thead {
@@ -49,12 +66,6 @@ table {
   border-spacing: 0px;
   padding: 30px 0px;
   margin: 0 auto;
-}
-
-.header__btn {
-   margin-left: auto;
-   background-color: var(--azure);
-   border: none;
 }
 
 th,
@@ -93,8 +104,4 @@ h2{
 .icon-button {
   border: none;
   background-color: var(--white);
-}
-
-.threeDot-icon {
-  background-color: var(--azure);
 }
