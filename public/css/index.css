@@ -8,7 +8,7 @@
 
   --azure: #0066d4;
   --white: #fff;
-
+  
   --body-text: var(--gray-dark);
   --headline-text: var(--white);
 
@@ -34,14 +34,6 @@ header {
   display: flex;
 }
 
-body{
-  display: inline-flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-}
-
 .threeDot-icon {
   background-color: var(--azure);
 }
@@ -58,7 +50,7 @@ thead {
 }
 
 td {
-  border-bottom: 2px solid var(--gray-medium);
+  border-bottom: 1px solid lightgray /*var(--gray-medium)*/;
 }
 
 table {
@@ -104,4 +96,8 @@ h2{
 .icon-button {
   border: none;
   background-color: var(--white);
+}
+
+.twrapper{
+  overflow-x:auto;
 }
