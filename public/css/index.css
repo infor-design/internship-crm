@@ -74,7 +74,7 @@ thead {
 
 th,
 td {
-  color: var(--gray-darker2); /*#242323*/
+  color: var(--gray-darker2);
   padding: var(--table-cell-height-spacing) var(--table-cell-width-spacing);
   margin: none;
 }
