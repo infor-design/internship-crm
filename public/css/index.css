@@ -3,6 +3,7 @@
   --gray-dark2: #040404;
   --gray-medium: #5d5d5d;
   --gray-darker: #3b3b3b;
+  --gray-darker2: #242323;
   --gray-light: #bfbfbf;
   --gray-lighter: #eee;
 
@@ -13,25 +14,34 @@
   --headline-text: var(--white);
 
   --table-cell-height-spacing: 12px;
+  --margin-spacing: 15px;
+  --h2-header-font-size: 18px;
   --table-cell-width-spacing: 25px;
   --pager-element-height: 30px;
 }
 
 html, body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 0 auto; /* for body */
+  font-weight: bold;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
-  font-family: sans-serif;
+  font-family: inherit;
 }
 
 header {
   background-color: var(--azure);
   color: var(--headline-text);
   display: flex;
+}
+
+h2{
+  margin: var(--margin-spacing) var(--table-cell-height-spacing);
+  font-weight: 400;
+  font-size: var(--h2-header-font-size);
 }
 
 .threeDot-icon {
@@ -44,13 +54,8 @@ header {
   border: none;
 }
 
-thead {
-  background-color: var(--gray-lighter);
-  text-align: left;
-}
-
-td {
-  border-bottom: 1px solid lightgray /*var(--gray-medium)*/;
+.twrapper{
+  overflow-x:auto;
 }
 
 table {
@@ -60,10 +65,26 @@ table {
   margin: 0 auto;
 }
 
+thead {
+  background-color: var(--gray-lighter);
+  text-align: left;
+  font-size: 14px;
+}
+
 th,
 td {
+  color: var(--gray-darker2);
   padding: var(--table-cell-height-spacing) var(--table-cell-width-spacing);
   margin: none;
+}
+
+td {
+  border-bottom: 1.5px solid var(--gray-dark);
+}
+
+.icon-btn {
+  border: none;
+  background-color: var(--white);
 }
 
 .pager {
@@ -73,31 +94,18 @@ td {
   justify-content: center;
 }
 
-.pager__btn {
-  height: inherit;
+.pager-btn {
+  border: none;
+  background-color: var(--white);
+  margin: 0 3px;
 }
 
 .pager__input-wrapper {
   padding: 0 var(--table-cell-spacing);
+  font-weight: normal;
 }
 
 .pager__input {
   line-height: var(--pager-element-height);
   max-width: 50px;
-}
-
-h2{
-  margin: 12px;
-  font-family: "Helvetica Neue"; 
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.icon-button {
-  border: none;
-  background-color: var(--white);
-}
-
-.twrapper{
-  overflow-x:auto;
 }
