@@ -3,7 +3,7 @@
   --gray-dark2: #040404;
   --gray-medium: #5d5d5d;
   --gray-darker: #3b3b3b;
-  --gray-darker2: #242323;
+  --gray-darker2: #363636;
   --gray-light: #bfbfbf;
   --gray-lighter: #eee;
 
@@ -50,6 +50,7 @@ h2{
 
 .header__btn {
   margin-left: auto;
+  margin-right: 10px;
   background-color: var(--azure);
   border: none;
 }
@@ -73,7 +74,7 @@ thead {
 
 th,
 td {
-  color: var(--gray-darker2);
+  color: var(--gray-darker2); /*#242323*/
   padding: var(--table-cell-height-spacing) var(--table-cell-width-spacing);
   margin: none;
 }
@@ -85,6 +86,7 @@ td {
 .icon-btn {
   border: none;
   background-color: var(--white);
+  margin: 2px;
 }
 
 .pager {
