@@ -80,7 +80,7 @@ td {
 }
 
 td {
-  border-bottom: 1.5px solid var(--gray-dark);
+  border-bottom: 1px solid var(--gray-dark);
 }
 
 .icon-btn {
