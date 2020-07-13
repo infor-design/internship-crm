@@ -5,7 +5,6 @@
   --gray-darker: #3b3b3b;
   --gray-light: #bfbfbf;
   --gray-lighter: #eee;
-
   --azure: #0066d4;
   --white: #fff;
 
@@ -44,7 +43,7 @@ form {
   margin: 0 auto;
 }
 
-.logo { 
+.icon-logo { 
   display: block;
   margin: 0 auto;
 }
