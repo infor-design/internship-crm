@@ -17,17 +17,18 @@
 }
 
 html {
+  font-family: 'Source Sans Pro', sans-serif;
   box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
+  font-family: 'Source Sans Pro', sans-serif;
   box-sizing: inherit;
 }
 
 body {
-  font-family: Helvetica;
   padding: var(--page-spacing) 0;
 }
 

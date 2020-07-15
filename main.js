@@ -10,10 +10,7 @@ console.log(`Server started at http://localhost:${port}`);
 // =================================================
 // Static Assets
 // =================================================
-app.use('/public/css', express.static(path.resolve(__dirname, 'public', 'css')));
-app.use('/public/img', express.static(path.resolve(__dirname, 'public', 'img')));
-app.use('/public/html', express.static(path.resolve(__dirname, 'public', 'html')));
-app.use('/public', express.static(path.resolve(__dirname, 'public')));
+app.use('/', express.static(path.resolve(__dirname, 'public')));
 
 // =================================================
 // Dynamic (Compiled) Assets
@@ -29,12 +26,17 @@ app.use(express.static(path.resolve(__dirname, 'dist'), {
 // This route contains all of our REST endpoints
 app.use('/api', require(path.resolve('app/src/api-routes.js')));
 
-// This is the original page we worked on
-app.get('/public/html', function(req,res) {
-  res.sendFile(path.resolve(__dirname, 'public', 'html', 'index.html'));
+// Customer Detail Page
+app.get('/detail', function(req,res) {
+  res.sendFile(path.resolve(__dirname, 'app', 'views', 'detail.html'));
 });
 
-// This is the new base route that links to our generated assets
-app.get('/', function(req,res) {
+// This is the original page we worked on
+app.get('/index', function (req, res) {
   res.sendFile(path.resolve(__dirname, 'app', 'views', 'index.html'));
+});
+
+// Sign-in / Error?
+app.get('/', function (req, res) {
+  res.sendFile(path.resolve(__dirname, 'app', 'views', 'signin.html'));
 });
