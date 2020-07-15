@@ -26,6 +26,9 @@ app.use(express.static(path.resolve(__dirname, 'dist'), {
 // =================================================
 // Routes
 // =================================================
+// This route contains all of our REST endpoints
+app.use('/api', require(path.resolve('app/src/api-routes.js')));
+
 // This is the original page we worked on
 app.get('/public/html', function(req,res) {
   res.sendFile(path.resolve(__dirname, 'public', 'html', 'index.html'));
