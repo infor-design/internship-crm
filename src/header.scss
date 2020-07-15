@@ -1,0 +1,16 @@
+header {
+  background-color: var(--azure);
+  color: var(--headline-text);
+  display: flex;
+}
+
+.threeDot-icon {
+  background-color: var(--azure);
+}
+
+.header__btn {
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: var(--azure);
+  border: none;
+}

@@ -1,60 +1,10 @@
-:root {
-  --gray-dark: darkgray;
-  --gray-dark2: #040404;
-  --gray-medium: #5d5d5d;
-  --gray-darker: #3b3b3b;
-  --gray-darker2: #363636;
-  --gray-light: #bfbfbf;
-  --gray-lighter: #eee;
-  
-  --azure: #0066d4;
-  --white: #fff;
-    
-  --body-text: var(--gray-dark);
-  --headline-text: var(--white);
-  
-  --table-cell-height-spacing: 12px;
-  --margin-spacing: 15px;
-  --h2-header-font-size: 18px;
-  --table-cell-width-spacing: 25px;
-  --pager-element-height: 30px;
+.page--detail {
+  p, h1 {
+    margin: 0;
+  }
 }
 
-html, body {
-  box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
-  margin: 0 auto; 
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-  font-family: inherit;
-}
-
-header {
-  background-color: var(--azure);
-  color: var(--headline-text);
-  display: flex;
-}
-
-h2 {
-  margin: var(--margin-spacing) var(--table-cell-height-spacing);
-  font-size: var(--h2-header-font-size);
-  font-weight: 200;
-}
-
-.header__btn {
-  margin-left: auto;
-  margin-right: 10px;
-  background-color: var(--azure);
-  border: none;
-}
-
-p, h1{
-  margin: 0;
-}
-
-.company-title{
+.company-title {
   display: flex;
 }
 
@@ -94,6 +44,7 @@ p, h1{
 }
 
 .counts {
+  justify-content: space-evenly;
   display: flex;
   text-align: center;
   color: var(--azure);
@@ -102,7 +53,6 @@ p, h1{
 .active-opportunities, .open-incidents,.escalated-incidents, .open-projects, .active-contacts{
   width: 90px;
   height: 130px;
-  margin-right: 130px;
   float: left;
 }
 

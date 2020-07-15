@@ -1,0 +1,40 @@
+:root {
+  --gray-dark: darkgray;
+  --gray-dark2: #040404;
+  --gray-medium: #5d5d5d;
+  --gray-darker: #3b3b3b;
+  --gray-darker2: #363636;
+  --gray-light: #bfbfbf;
+  --gray-lighter: #eee;
+
+  --azure: #0066d4;
+  --white: #fff;
+  
+  --body-text: var(--gray-dark);
+  --headline-text: var(--white);
+
+  --table-cell-height-spacing: 12px;
+  --margin-spacing: 15px;
+  --h2-header-font-size: 18px;
+  --table-cell-width-spacing: 25px;
+  --pager-element-height: 30px;
+}
+
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box;
+  margin: 0 auto; /* for body */
+  font-weight: bold;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+h2 {
+  margin: var(--margin-spacing) var(--table-cell-height-spacing);
+  font-size: var(--h2-header-font-size);
+  font-weight: 200;
+}

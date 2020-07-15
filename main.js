@@ -36,6 +36,11 @@ app.get('/index', function (req, res) {
   res.sendFile(path.resolve(__dirname, 'app', 'views', 'index.html'));
 });
 
+// Error Page (Temporary)
+app.get('/error', function (req, res) {
+  res.sendFile(path.resolve(__dirname, 'app', 'views', '404.html'));
+});
+
 // Sign-in / Error?
 app.get('/', function (req, res) {
   res.sendFile(path.resolve(__dirname, 'app', 'views', 'signin.html'));
