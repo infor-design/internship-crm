@@ -1,9 +1,12 @@
 var express = require('express');
 var path = require('path');
 
+var customers = require("./app/data/customers");
+
 var app = express();
 var port = 8000;
 
+console.log(customers);
 app.listen(port);
 console.log(`Server started at http://localhost:${port}`);
 
