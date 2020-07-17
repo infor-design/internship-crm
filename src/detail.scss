@@ -1,0 +1,64 @@
+.page--detail {
+  p, h1 {
+    margin: 0;
+  }
+
+  .company-name {
+    color: var(--gray-darker);
+    margin: 40px 0px 5px 25px;
+    font-size: var(--h2-header-font-size);
+  }
+
+  .company-location {
+    margin-bottom: var(--minimum-margin-spacing);
+  }
+
+  .star-button {
+    background-color: white;
+    border: none;
+    margin-top: 36px;
+    margin-left: auto;
+  }
+
+  .favorite-text {
+    color: var(--gray-darker);
+    margin-top: 43px;
+    margin-right: 45px;
+  }
+}
+
+.company-title {
+  display: flex;
+}
+
+.company-information {
+  width: 100px;
+  height: 100px;
+  color: var(--gray-darker);
+  margin: 0px 35px 0px 35px;
+  font-size: var(--margin-spacing);
+}
+
+.company-id, .company-location {
+  color: black;
+  font-weight: bolder;
+}
+
+.counts {
+  justify-content: space-evenly;
+  display: flex;
+  text-align: center;
+  color: var(--azure);
+}
+  
+.active-opportunities, .open-incidents,.escalated-incidents, .open-projects, .active-contacts{
+  width: 90px;
+  height: 130px;
+  float: left;
+}
+
+.numbers {
+  font-size: 55px;
+  font-weight: 200;
+  margin-bottom: var(--margin-spacing);
+}

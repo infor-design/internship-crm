@@ -1,0 +1,62 @@
+.page--sign-in {
+  padding: var(--page-spacing) 0;
+
+  form {
+    border: 2px grey;
+    text-align: left;
+    color: var(--gray-darker);
+    font-weight: normal; 
+  }
+
+  input {
+    margin-top: var(--label-spacing);
+    margin-bottom: var(--h2-header-font-size);
+    height: var(--table-cell-width-spacing);
+    width: 100%;
+  }
+
+  button {
+    margin-bottom: var(--table-cell-height-spacing);
+    background-color: var(--azure);
+    color: var(--white);
+    border: none;
+    padding: 7px;
+    width: 100%;
+  }
+}
+
+.form-container {
+  height: inherit;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.icon-logo { 
+  display: block;
+  margin: 0 auto;
+}
+
+.page-name {
+  text-align: center;
+  color: var(--gray-darker);
+  font-weight: normal; 
+}
+
+.ast {
+  color:red;
+} 
+
+.newpassword-page {
+  text-align:center;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
+}
