@@ -4,17 +4,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Starter customer data (replace this with a file import at some point)
-const customerData = [
-  {
-    id: 0,
-    customerName: 'Lida Snyder',
-    companyName: 'Alexander Gravel & Stone',
-    location: 'Terrencefort, TX',
-    phone: '414-821-0697',
-    startDate: '04/25/2016'
-  }
-];
+const customers = require("../data/customers");
 
 // GET a single `/api/customers/:id`
 // TODO: Uncomment this and get this working.
@@ -29,7 +19,24 @@ router.get('/customers/:id', (req, res, next) => {
 
 // GET all `/api/customers`
 router.get('/customers', (req, res, next) => {
-  res.status(200).json(customerData);
+  res.status(200).json(customers);
+});
+
+// GET all `/api/customers/:id`
+router.get('/customers/:id', (req, res, next) => {
+  const id = req.query.id;
+  let record;
+
+  customers.forEach((customer, i) => {
+    if (i === customers[i].id && !record) {
+      record = customers[i];
+    }
+  });
+
+  if (record) {
+    res.status(200).json(record);
+  }
+  next();
 });
 
 // Catch-all Base Route
