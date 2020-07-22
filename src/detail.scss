@@ -8,6 +8,11 @@
     font-weight: 100;
   }
 
+  .main{
+    overflow-x: auto;
+    width: inherit;
+  }
+
   .company-name {
     color: var(--gray-darker);
     margin: 40px 0px var(--table-cell-height-spacing) var(--table-cell-width-spacing);
@@ -43,10 +48,8 @@
 
 .company-information {
   display: block;
-  width: 100px;
-  height: 100px;
   color: var(--gray-medium);
-  margin: 0px 35px 0px 35px;
+  margin-left: 35px;
   font-size: var(--margin-spacing);
   font-weight:100;
 }
@@ -62,18 +65,15 @@
 }
 
 .counts {
-  margin: var(--h2-header-font-size) 0px 0px 80px;
   display: inherit;
   text-align: center;
   color: var(--azure);
+  width: calc(100% - 170px);
+  justify-content: space-evenly;
 }
   
 .active-opportunities, .open-incidents,.escalated-incidents, .open-projects, .active-contacts{
-  width: 80px;
-  height: 130px;
-  float: left;
   font-weight: 100;
-  margin-right:170px;
 }
 
 .numbers {
@@ -88,6 +88,8 @@
   border: none;
   border-bottom: 1px solid var(--gray-light);
   padding-left: var(--h2-header-font-size);
+  width: inherit;
+  overflow: scroll;
 }
 
 .tab button{
