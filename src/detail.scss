@@ -3,10 +3,16 @@
     margin: 0;
   }
 
+  h3{
+    margin-top: 0;
+    font-weight: 100;
+  }
+
   .company-name {
     color: var(--gray-darker);
-    margin: 40px 0px 5px 25px;
+    margin: 40px 0px var(--table-cell-height-spacing) var(--table-cell-width-spacing);
     font-size: var(--h2-header-font-size);
+    font-weight: 100;
   }
 
   .company-location {
@@ -22,7 +28,7 @@
 
   .favorite-text {
     color: var(--gray-darker);
-    margin-top: 43px;
+    margin-top: 46px;
     margin-right: 45px;
   }
 }
@@ -31,34 +37,87 @@
   display: flex;
 }
 
+.company-wrapper {
+  display: flex;
+}
+
 .company-information {
+  display: block;
   width: 100px;
   height: 100px;
-  color: var(--gray-darker);
+  color: var(--gray-medium);
   margin: 0px 35px 0px 35px;
   font-size: var(--margin-spacing);
+  font-weight:100;
+}
+
+.company-id, .company-location, .last-refreshed, .lf-date {
+  width: 100px;
+  height: 20px;
 }
 
 .company-id, .company-location {
   color: black;
-  font-weight: bolder;
+  font-weight: 900;
 }
 
 .counts {
-  justify-content: space-evenly;
-  display: flex;
+  margin: var(--h2-header-font-size) 0px 0px 80px;
+  display: inherit;
   text-align: center;
   color: var(--azure);
 }
   
 .active-opportunities, .open-incidents,.escalated-incidents, .open-projects, .active-contacts{
-  width: 90px;
+  width: 80px;
   height: 130px;
   float: left;
+  font-weight: 100;
+  margin-right:170px;
 }
 
 .numbers {
   font-size: 55px;
   font-weight: 200;
   margin-bottom: var(--margin-spacing);
+}
+
+.tab-section{
+  display: flex;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid var(--gray-light);
+  padding-left: var(--h2-header-font-size);
+}
+
+.tab button{
+  margin-top: var(--minimum-margin-spacing);
+  padding: var(--margin-spacing) 23px;
+  font-size: var(--margin-spacing);
+  color: var(--gray-medium);
+  background-color: var(--white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.tab button:hover {
+  background-color: var(--gray-lighter);
+}
+
+.tab button.active {
+  color: var(--azure);
+  border: none;
+  border-bottom: 4px solid var(--azure);
+}
+
+.tabContent {
+  margin: var(--table-cell-width-spacing) var(--pager-element-height);
+  border-radius: var(--label-spacing);
+  padding: var(--table-cell-height-spacing) var(--h2-header-font-size);
+  border: 1px solid #ccc;
+  color: var(--gray-darker);
+  font-weight: 100;
+  border-style: outset;
+  display: none;
 }
