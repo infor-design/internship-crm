@@ -24,7 +24,7 @@ app.use(express.static(path.resolve(__dirname, 'dist'), {
 // Routes
 // =================================================
 // This route contains all of our REST endpoints
-app.use('/api', require(path.resolve('app/src/api-routes.js')));
+app.use('/api', require(path.resolve('app/src/js/api-routes.js')));
 
 // Customer Detail Page
 app.get('/detail', function(req,res) {
