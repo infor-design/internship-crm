@@ -1,3 +1,3 @@
-import './global';
+import '../scss/global';
 
 console.log('Finished!');
