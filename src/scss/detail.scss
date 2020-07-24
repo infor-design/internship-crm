@@ -3,10 +3,21 @@
     margin: 0;
   }
 
+  h3{
+    margin-top: 0;
+    font-weight: 100;
+  }
+
+  .main{
+    overflow-x: auto;
+    width: inherit;
+  }
+
   .company-name {
     color: var(--gray-darker);
-    margin: 40px 0px 5px 25px;
+    margin: 40px 0px var(--table-cell-height-spacing) var(--table-cell-width-spacing);
     font-size: var(--h2-header-font-size);
+    font-weight: 100;
   }
 
   .company-location {
@@ -22,7 +33,7 @@
 
   .favorite-text {
     color: var(--gray-darker);
-    margin-top: 43px;
+    margin-top: 46px;
     margin-right: 45px;
   }
 }
@@ -31,34 +42,101 @@
   display: flex;
 }
 
+.company-wrapper {
+  display: flex;
+}
+
 .company-information {
-  width: 100px;
-  height: 100px;
-  color: var(--gray-darker);
-  margin: 0px 35px 0px 35px;
+  display: block;
+  color: var(--gray-medium);
+  margin-left: 35px;
   font-size: var(--margin-spacing);
+  font-weight:100;
+}
+
+.company-id, .company-location, .last-refreshed, .lf-date {
+  width: 100px;
+  height: 20px;
 }
 
 .company-id, .company-location {
   color: black;
-  font-weight: bolder;
+  font-weight: 900;
 }
 
 .counts {
-  justify-content: space-evenly;
-  display: flex;
+  margin-top: 18px 0px;
+  display: inherit;
   text-align: center;
   color: var(--azure);
+  width: calc(100% - 170px);
+  justify-content: space-evenly;
 }
   
 .active-opportunities, .open-incidents,.escalated-incidents, .open-projects, .active-contacts{
-  width: 90px;
-  height: 130px;
-  float: left;
+  font-weight: 100;
 }
 
 .numbers {
   font-size: 55px;
   font-weight: 200;
   margin-bottom: var(--margin-spacing);
+}
+
+.tab-section{
+  display: flex;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid var(--gray-light);
+  padding-left: var(--h2-header-font-size);
+  width: inherit;
+  overflow: scroll;
+}
+
+.tab button {
+  margin-top: var(--minimum-margin-spacing);
+  padding: var(--margin-spacing) 23px;
+  font-size: var(--margin-spacing);
+  color: var(--gray-medium);
+  background-color: var(--white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 3px;
+  }
+}
+
+.tab button:hover::after {
+  background-color: var(--gray-light);
+}
+
+.tab button.active {
+  color: var(--azure);
+
+  &::after {
+    background-color: var(--azure);
+    border: none;
+  }
+}
+
+.tabContent {
+  margin: var(--table-cell-width-spacing) var(--pager-element-height);
+  border-radius: var(--label-spacing);
+  padding: var(--table-cell-height-spacing) var(--h2-header-font-size);
+  border: 1px solid #ccc;
+  color: var(--gray-darker);
+  font-weight: 100;
+  border-style: outset;
+  display: none;
 }
