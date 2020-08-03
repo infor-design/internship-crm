@@ -27,8 +27,10 @@
   .star-button {
     background-color: white;
     border: none;
+    cursor: pointer;
     margin-top: 36px;
     margin-left: auto;
+    outline:none;
   }
 
   .favorite-text {
@@ -37,6 +39,49 @@
     margin-right: 45px;
   }
 }
+
+.star-button {
+  stroke: var(--gray-darker);
+  color: var(--white);
+  
+  .icon {
+    pointer-events: none;
+    fill: currentColor;
+  }
+
+  &.selected {
+    color: var(--gray-darker);
+
+    .icon {
+      stroke-width: 1px;
+      stroke: var(--gray-darker);
+      fill: currentColor;
+    }
+  }
+}
+/*
+  #icon-star-outlined {
+    stroke: var(--gray-darker);
+    // stroke-width: 1px;
+    fill: var(--white);
+  }
+  
+  #icon-star-filled {
+    fill: var(--gray-darker);
+  }
+  */
+
+// [aria-pressed] {
+//   border-style: outset;
+// }
+
+// [aria-pressed="true"] {
+//   border-style: inset;
+
+//   #icon-star-outlined{
+//     fill:blue;
+//   }
+// }
 
 .company-title {
   display: flex;

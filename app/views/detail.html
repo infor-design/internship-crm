@@ -11,8 +11,8 @@
     <body class="page--detail">
       <div class="svg-icons"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-icons" display="none"><symbol id="icon-add-grid-record" viewBox="0 0 16 18"><path d="M13 12a1 1 0 00-1 1v1h-1a1 1 0 000 2h1v1a1 1 0 002 0v-1h1a1 1 0 000-2h-1v-1a1 1 0 00-1-1zm-4-2h6a1 1 0 001-1V2.459h-.004A2.501 2.501 0 0013.5 0h-11A2.5 2.5 0 000 2.5v13A2.5 2.5 0 002.5 18H7a1 1 0 001-1v-6a1 1 0 011-1zm2-8h2.5c.275 0 .5.225.5.5v1c0 .275-.225.5-.5.5H11V2zm0 4h2.5c.275 0 .5.225.5.5v1c0 .275-.225.5-.5.5H11V6zM7 6h2v2H7V6zM5 16H2.5a.501.501 0 01-.5-.5v-1c0-.275.225-.5.5-.5H5v2zm0-4H2.5a.501.501 0 01-.5-.5v-1c0-.275.225-.5.5-.5H5v2zm0-4H2.5a.501.501 0 01-.5-.5v-1c0-.275.225-.5.5-.5H5v2zm0-4H2.5a.501.501 0 01-.5-.5v-1c0-.275.225-.5.5-.5H5v2z" fill="currentColor" fill-rule="nonzero" stroke="none"></path></symbol>
         <symbol id="icon-more" viewBox="0 0 18 18"><path d="M16.5 7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM9 7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM1.5 7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" fill="white" fill-rule="evenodd" stroke="none"></path></symbol>
-        <symbol id="icon-star-outlined" viewBox="0 0 18 18"><path d="M9 1.5l2.471 4.938 5.529.79-4 3.845.944 5.427L9 13.937 4.056 16.5l.945-5.428L1 7.23l5.529-.792z" stroke="#3b3b3b" fill="none" fill-rule="evenodd" vector-effect="non-scaling-stroke"></path></symbol>
-        <symbol id="icon-star-filled" viewBox="0 0 18 18"><path d="M9 .5l2.782 5.596L18 6.994l-4.5 4.355 1.062 6.151L9 14.596 3.438 17.5 4.5 11.349 0 6.994l6.218-.898z" fill="#3b3b3b" fill-rule="evenodd" stroke="none"></path></symbol>
+        <symbol id="icon-star-outlined" viewBox="0 0 18 18"><path d="M9 1.5l2.471 4.938 5.529.79-4 3.845.944 5.427L9 13.937 4.056 16.5l.945-5.428L1 7.23l5.529-.792z" fill-rule="evenodd" vector-effect="non-scaling-stroke"></path></symbol>
+        <symbol id="icon-star-filled" viewBox="0 0 18 18"><path d="M9 .5l2.782 5.596L18 6.994l-4.5 4.355 1.062 6.151L9 14.596 3.438 17.5 4.5 11.349 0 6.994l6.218-.898z" fill-rule="evenodd"></path></symbol>
       </svg></div>
 
       <header>
@@ -27,7 +27,7 @@
       <section class="main">
         <div class="company-title">
           <p class="company-name">Alexandar Gravel & Stone (Prospect)</p>
-          <button class ="star-button">
+          <button class="star-button" aria-pressed="false">
             <svg class="icon" focusable="false" role="presentation" width="20" height="20">
               <use xlink:href="#icon-star-filled"></use>
             </svg>
@@ -71,94 +71,79 @@
           </div>
         </div>
 
-        <div class="tab-section">
-          <div class="tab">
-            <button class="buttonTab" onclick="openTab(event, 'Company')">Company</button>
+        <div id="customer-detail-tabs" class="tabs">
+          <div class="tab-section">
+            <div class="tab">
+              <button class="buttonTab">Company</button>
+            </div>
+            <div class="tab">
+              <button class ="buttonTab">Billings</button>
+            </div>
+            <div class="tab">
+              <button class ="buttonTab">Contacts</button>
+            </div>
+            <div class="tab">
+              <button class ="buttonTab">Infor Team</button>
+            </div>
+            <div class="tab">
+              <button class ="buttonTab">Invoices</button>
+            </div>
+            <div class="tab">
+              <button class ="buttonTab">Installed Products</button>
+            </div>
+            <div class="tab">
+              <button class ="buttonTab active">Incidents</button>
+            </div>
+            <div class="tab">
+              <button class ="buttonTab">Projects</button>
+            </div>
+            <div class="tab">
+              <button class ="buttonTab">Survey Results</button>
+            </div>
           </div>
-          <div class="tab">
-            <button class ="buttonTab" onclick="openTab(event, 'Billings')">Billings</button>
-          </div>
-          <div class="tab">
-            <button class ="buttonTab" onclick="openTab(event, 'Contacts')">Contacts</button>
-          </div>
-          <div class="tab">
-            <button class ="buttonTab" onclick="openTab(event, 'Infor Team')">Infor Team</button>
-          </div>
-          <div class="tab">
-            <button class ="buttonTab" onclick="openTab(event, 'Invoices')">Invoices</button>
-          </div>
-          <div class="tab">
-            <button class ="buttonTab" onclick="openTab(event, 'Installed Products')">Installed Products</button>
-          </div>
-          <div class="tab">
-            <button class ="buttonTab" onclick="openTab(event, 'Incidents')">Incidents</button>
-          </div>
-          <div class="tab">
-            <button class ="buttonTab" onclick="openTab(event, 'Projects')">Projects</button>
-          </div>
-          <div class="tab">
-            <button class ="buttonTab" onclick="openTab(event, 'Survey Results')">Survey Results</button>
+
+          <div class="content-section">
+            <div id="Company" class="tabContent">
+              <h3>Overview</h3>
+              <h3>Alexandar Gravel & Stone</h3>
+              <p>This section will include information related to a company overview.</p>
+            </div>
+            <div id="Billings" class="tabContent">
+              <h3>Billings</h3>
+              <p>This section will include information related to billings.</p>
+            </div>
+            <div id="Contacts" class="tabContent">
+              <h3>Contacts</h3>
+              <p>This section will include information related to contacts.</p>
+            </div>
+            <div id="Infor Team" class="tabContent">
+              <h3>Infor Team</h3>
+              <p>This section will include information related to the Infor team.</p>
+            </div>
+            <div id="Invoices" class="tabContent">
+              <h3>Invoices</h3>
+              <p>This section will include information related to invoices.</p>
+            </div>
+            <div id="Installed Products" class="tabContent">
+              <h3>Installed Products</h3>
+              <p>This section will include information related to installed products.</p>
+            </div>
+            <div id="Incidents" class="tabContent">
+              <h3>Incidents</h3>
+              <p>This section will include information related to incidents.</p>
+            </div>
+            <div id="Projects" class="tabContent">
+              <h3>Projects</h3>
+              <p>This section will include information related to projects.</p>
+            </div>
+            <div id="Survey Results" class="tabContent">
+              <h3>Survey Results</h3>
+              <p>This section will include information related to survey results.</p>
+            </div>
           </div>
         </div>
 
-        <div class="content-section">
-          <div id="Company" class="tabContent">
-            <h3>Overview</h3>
-            <h3>Alexandar Gravel & Stone</h3>
-            <p>This section will include information related to a company overview.</p>
-          </div>
-          <div id="Billings" class="tabContent">
-            <h3>Billings</h3>
-            <p>This section will include information related to billings.</p>
-          </div>
-          <div id="Contacts" class="tabContent">
-            <h3>Contacts</h3>
-            <p>This section will include information related to contacts.</p>
-          </div>
-          <div id="Infor Team" class="tabContent">
-            <h3>Infor Team</h3>
-            <p>This section will include information related to the Infor team.</p>
-          </div>
-          <div id="Invoices" class="tabContent">
-            <h3>Invoices</h3>
-            <p>This section will include information related to invoices.</p>
-          </div>
-          <div id="Installed Products" class="tabContent">
-            <h3>Installed Products</h3>
-            <p>This section will include information related to installed products.</p>
-          </div>
-          <div id="Incidents" class="tabContent">
-            <h3>Incidents</h3>
-            <p>This section will include information related to incidents.</p>
-          </div>
-          <div id="Projects" class="tabContent">
-            <h3>Projects</h3>
-            <p>This section will include information related to projects.</p>
-          </div>
-          <div id="Survey Results" class="tabContent">
-            <h3>Survey Results</h3>
-            <p>This section will include information related to survey results.</p>
-          </div>
-        </div>
-
-        <script>
-          function openTab(event, tabName) {
-            var i, tabContent, buttonTab;
-
-            tabContent = document.getElementsByClassName("tabContent");
-            for (i = 0; i < tabContent.length; i++) {
-              tabContent[i].style.display = "none";
-            }
-
-            buttonTab = document.getElementsByClassName("buttonTab");
-            for (i = 0; i < buttonTab.length; i++) {
-              buttonTab[i].className = buttonTab[i].className.replace(" active", "");
-            }
-
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.className += " active";
-          }
-        </script>
+        <script type="text/javascript" src="main.js"></script>
 
       </section>
     </body>
