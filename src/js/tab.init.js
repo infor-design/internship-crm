@@ -1,6 +1,6 @@
 import { tabList } from './tab';
 
-// Invokes against the Details Page tablis
+// Invokes against the Details Page tablist
 const customerDetailTabs = document.querySelector('#customer-detail-tabs');
 const customerDetailTabsAPI = new tabList(customerDetailTabs, {});
 
