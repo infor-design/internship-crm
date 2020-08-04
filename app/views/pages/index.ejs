@@ -1,42 +1,5 @@
 <%- include('../partials/head.ejs') %>
 <%- include('../partials/svg.ejs') %>
-<div class="svg-icons"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-icons" display="none">
-    <symbol id="icon-add-grid-record" viewBox="0 0 16 18">
-      <path
-        d="M13 12a1 1 0 00-1 1v1h-1a1 1 0 000 2h1v1a1 1 0 002 0v-1h1a1 1 0 000-2h-1v-1a1 1 0 00-1-1zm-4-2h6a1 1 0 001-1V2.459h-.004A2.501 2.501 0 0013.5 0h-11A2.5 2.5 0 000 2.5v13A2.5 2.5 0 002.5 18H7a1 1 0 001-1v-6a1 1 0 011-1zm2-8h2.5c.275 0 .5.225.5.5v1c0 .275-.225.5-.5.5H11V2zm0 4h2.5c.275 0 .5.225.5.5v1c0 .275-.225.5-.5.5H11V6zM7 6h2v2H7V6zM5 16H2.5a.501.501 0 01-.5-.5v-1c0-.275.225-.5.5-.5H5v2zm0-4H2.5a.501.501 0 01-.5-.5v-1c0-.275.225-.5.5-.5H5v2zm0-4H2.5a.501.501 0 01-.5-.5v-1c0-.275.225-.5.5-.5H5v2zm0-4H2.5a.501.501 0 01-.5-.5v-1c0-.275.225-.5.5-.5H5v2z"
-        fill="currentColor" fill-rule="nonzero" stroke="none"></path>
-    </symbol>
-    <symbol id="icon-binoculars" viewBox="0 0 18 18">
-      <path
-        d="M6.682 8.59h4.636m-4.636 0a3.092 3.092 0 01-6.182 0 3.092 3.092 0 016.182 0zm10.818 0a3.092 3.092 0 01-6.182 0 3.092 3.092 0 016.182 0z"
-        stroke="#363636" fill="none" fill-rule="evenodd" vector-effect="non-scaling-stroke"></path>
-    </symbol>
-    <symbol id="icon-first-page" viewBox="0 0 18 18">
-      <path d="M15.5 17.5L7 9 15.5.5m-14 0v17" stroke="#363636" fill="none" fill-rule="evenodd"
-        vector-effect="non-scaling-stroke"></path>
-    </symbol>
-    <symbol id="icon-last-page" viewBox="0 0 18 18">
-      <path d="M2.5.5L11 9l-8.5 8.5m14 0V.5" stroke="#363636" fill="none" fill-rule="evenodd"
-        vector-effect="non-scaling-stroke"></path>
-    </symbol>
-    <symbol id="icon-more" viewBox="0 0 18 18">
-      <path
-        d="M16.5 7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM9 7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM1.5 7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"
-        fill="white" fill-rule="evenodd" stroke="none"></path>
-    </symbol>
-    <symbol id="icon-next-page" viewBox="0 0 18 18">
-      <path d="M5.5 17.5L14 9 5.5.5z" stroke="#363636" fill="none" fill-rule="evenodd"
-        vector-effect="non-scaling-stroke"></path>
-    </symbol>
-    <symbol id="icon-previous-page" viewBox="0 0 18 18">
-      <path d="M12.5 17.5L4 9 12.5.5z" stroke="#363636" fill="none" fill-rule="evenodd"
-        vector-effect="non-scaling-stroke"></path>
-    </symbol>
-    <symbol id="icon-quick-edit" viewBox="0 0 18 18">
-      <path d="M.5 17.5v-4.055L12.945 1 17 5.055 4.555 17.5H.5zM10.893 2.979l3.894 3.894M8 17.5h9m-5-3h5"
-        stroke="#363636" fill="none" fill-rule="evenodd" vector-effect="non-scaling-stroke"></path>
-    </symbol>
-  </svg></div>
 
 <header>
   <h2>Customer List</h2>
@@ -46,6 +9,10 @@
     </svg>
   </button>
 </header>
+
+<% data.forEach(function(customer) { %>
+  <li><%= customer.companyName %> - <%= customer.phone %> - <%= customer.location %></li>
+<% }); %>
 
 <section class="main">
   <div class="twrapper">

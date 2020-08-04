@@ -1,8 +1,9 @@
-var express = require('express');
-var path = require('path');
+const express = require('express');
+const path = require('path');
 
-var app = express();
-var port = 8000;
+const app = express();
+const port = 8000;
+const fetch = require("node-fetch");
 
 app.listen(port);
 console.log(`Server started at http://localhost:${port}`);
@@ -29,9 +30,21 @@ app.use(express.static(path.resolve(__dirname, 'dist'), {
 // This route contains all of our REST endpoints
 app.use('/api', require(path.resolve('app/src/js/api-routes.js')));
 
+// Endpoints
+const customersEndpoint = `http://localhost:${port}/api/customers`
 
-app.get('/testejs', function(req,res) {
-  res.render('pages/index')
+// Test EJS page
+app.get('/test-ejs', async (req, res) => {
+  try {
+    const api_res = await fetch(customersEndpoint);
+    const data = await api_res.json();
+    res.render('pages/index', {
+      title: 'Detail',
+      data: data
+    });
+  } catch(e) {
+    console.error(e);
+  }
 });
 
 // Customer Detail Page
