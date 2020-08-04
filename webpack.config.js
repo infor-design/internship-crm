@@ -6,8 +6,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Actual Webpack Config
 module.exports = {
-  entry: './src/js/index.js',
+  entry: [
+    './src/js/index.ejs',
+  ],
 
+  output: {
+    filename: 'my-first-webpack.bundle.js'
+  },
+  
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -48,6 +54,18 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment
+            }
+          }
+        ]
+      },
+      {
+        test: /\.ejs$/,
+        use: [
+          {
+            loader: 'ejs-webpack-loader',
+            options: {
+              data: { title: "New Title", someVar: "hello world" },
+              htmlmin: true
             }
           }
         ]
