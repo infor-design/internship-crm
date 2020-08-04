@@ -7,12 +7,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Actual Webpack Config
 module.exports = {
   entry: [
-    './src/js/index.ejs',
+    './src/js/index.js',
   ],
-
-  output: {
-    filename: 'my-first-webpack.bundle.js'
-  },
   
   plugins: [
     new MiniCssExtractPlugin({

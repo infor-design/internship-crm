@@ -8,6 +8,7 @@ app.listen(port);
 console.log(`Server started at http://localhost:${port}`);
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/app/views'));
 
 // =================================================
 // Static Assets
@@ -32,6 +33,7 @@ app.use('/api', require(path.resolve('app/src/js/api-routes.js')));
 app.get('/testejs', function(req,res) {
   res.render('pages/index')
 });
+
 // Customer Detail Page
 app.get('/detail', function(req,res) {
   res.sendFile(path.resolve(__dirname, 'app', 'views', 'detail.html'));
