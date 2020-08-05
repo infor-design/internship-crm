@@ -1,0 +1,207 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/svg.ejs') %>
+
+<header>
+  <h2>Customer List</h2>
+  <button class="header__btn">
+    <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+      <use xlink:href="#icon-more"></use>
+    </svg>
+  </button>
+</header>
+
+<% data.forEach(function(customer) { %>
+  <li><%= customer.companyName %> - <%= customer.phone %> - <%= customer.location %></li>
+<% }); %>
+
+<section class="main">
+  <div class="twrapper">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Company Name</th>
+          <th>Phone</th>
+          <th>Location</th>
+          <th>Contact Name</th>
+          <th>Customer Since</th>
+          <th>Edit</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body">
+        <tr>
+          <td></td>
+          <td>Alexander Gravel & Stone</td>
+          <td>414-821-0697</td>
+          <td>Terrencefort, TX</td>
+          <td>Lida Snyder</td>
+          <td>04/25/2016</td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-quick-edit"></use>
+              </svg>
+            </button></td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-binoculars"></use>
+              </svg>
+            </button></td>
+        </tr>
+        <td></td>
+        <td>Briar Valley Gravel</td>
+        <td>702-389-9973</td>
+        <td>Davontemouth, UT</td>
+        <td>Bull Cunningham</td>
+        <td>05/02/2016</td>
+        <td class="icon"><button class="icon-btn">
+            <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+              <use xlink:href="#icon-quick-edit"></use>
+            </svg>
+          </button></td>
+        <td class="icon"><button class="icon-btn">
+            <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+              <use xlink:href="#icon-binoculars"></use>
+            </svg>
+          </button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Riverhead Building Supply</td>
+          <td>929-769-3984</td>
+          <td>Hermistonhaven, AZ</td>
+          <td>Johnny Fields</td>
+          <td>08/28/2016</td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-quick-edit"></use>
+              </svg>
+            </button></td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-binoculars"></use>
+              </svg>
+            </button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Gravel Corp</td>
+          <td>299-166-7016</td>
+          <td>North Beau, NV</td>
+          <td>Nina Mendez</td>
+          <td>01/25/2015</td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-quick-edit"></use>
+              </svg>
+            </button></td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-binoculars"></use>
+              </svg>
+            </button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>United Construction</td>
+          <td>299-166-7067</td>
+          <td>New Abdul, TX</td>
+          <td>Paul Strayer</td>
+          <td>04/21/2016</td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-quick-edit"></use>
+              </svg>
+            </button></td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-binoculars"></use>
+              </svg>
+            </button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Gravel, Gravel, Gravel</td>
+          <td>299-166-7076</td>
+          <td>Smithsville, UT</td>
+          <td>John Nasmith</td>
+          <td>06/25/2016</td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-quick-edit"></use>
+              </svg>
+            </button></td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-binoculars"></use>
+              </svg>
+            </button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Stone Gravel Supply Company</td>
+          <td>202-504-5299</td>
+          <td>Ryesmith, AK</td>
+          <td>Spring Adams</td>
+          <td>07/25/2015</td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-quick-edit"></use>
+              </svg>
+            </button></td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-binoculars"></use>
+              </svg>
+            </button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Smith Gravel & Stone</td>
+          <td>411-821-0697</td>
+          <td>Lancaster, TX</td>
+          <td>Mary Adams</td>
+          <td>04/25/2016</td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-quick-edit"></use>
+              </svg>
+            </button></td>
+          <td class="icon"><button class="icon-btn">
+              <svg class="icon" focusable="false" role="presentation" width="25" height="25">
+                <use xlink:href="#icon-binoculars"></use>
+              </svg>
+            </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pager">
+    <button class="pager-btn">
+      <svg class="icon" focusable="false" role="presentation" width="20" height="20">
+        <use xlink:href="#icon-first-page"></use>
+      </svg>
+    </button>
+    <button class="pager-btn">
+      <svg class="icon" focusable="false" role="presentation" width="20" height="20">
+        <use xlink:href="#icon-previous-page"></use>
+      </svg>
+    </button>
+    <div class="pager__input-wrapper"> Page <input class="pager__input" id="page_number" value="1"> of 10 </div>
+    <button class="pager-btn">
+      <svg class="icon" focusable="false" role="presentation" width="20" height="20">
+        <use xlink:href="#icon-next-page"></use>
+      </svg>
+    </button>
+    <button class="pager-btn">
+      <svg class="icon" focusable="false" role="presentation" width="20" height="20">
+        <use xlink:href="#icon-last-page"></use>
+      </svg>
+    </button>
+    <button id="records" class="pager__btn">10 Records</button>
+  </div>
+</section>
+
+<%- include('../partials/footer.ejs') %>
