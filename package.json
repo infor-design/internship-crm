@@ -8,7 +8,24 @@
     "dev": "npm run build -- --mode development && node ./main",
     "start": "npm run build && node ./main"
   },
-  "author": "Griffin Blotner",
+  "author": "Hook & Loop",
+  "contributors": [
+    {
+      "name": "Deepak Verma"
+    },
+    {
+      "name": "Ed Coyle"
+    }, 
+    {
+      "name": "Griffin Blotner"
+    },
+    {
+      "name": "John Macaluso"
+    },
+    {
+      "name": "Riya Tayal"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
     "css-loader": "^3.6.0",
