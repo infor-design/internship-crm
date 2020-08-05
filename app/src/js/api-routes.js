@@ -36,7 +36,7 @@ if (isNaN(id)) {
   }
 
 // A foreach loop that assigns a record to each of the customers in the collection
-  customers.forEach((customer, i) => {
+  customers.forEach((customer) => {
     if (id === customer.id && !record) {
       record = customer;
     }
