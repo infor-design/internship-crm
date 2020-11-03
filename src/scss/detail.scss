@@ -27,14 +27,46 @@
   .star-button {
     background-color: white;
     border: none;
+    cursor: pointer;
     margin-top: 36px;
     margin-left: auto;
+    outline:none;
   }
 
   .favorite-text {
     color: var(--gray-darker);
     margin-top: 46px;
     margin-right: 45px;
+  }
+}
+
+.star-button {
+  stroke: var(--gray-darker);
+  color: var(--white);
+
+  > * {
+    vertical-align: middle;
+  }
+  
+  .icon {
+    pointer-events: none;
+    fill: currentColor;
+  }
+
+  .favorite-text {
+    font-size: 16px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+
+  &.selected {
+    color: var(--gray-darker);
+
+    .icon {
+      stroke-width: 1px;
+      stroke: var(--gray-darker);
+      fill: currentColor;
+    }
   }
 }
 
